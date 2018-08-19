@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "ngx-quickly": {
+      "root": "projects/ngx-quickly",
+      "sourceRoot": "projects/ngx-quickly/src",
+      "projectType": "library",
+      "prefix": "qly",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-quickly/tsconfig.lib.json",
+            "project": "projects/ngx-quickly/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-quickly/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-quickly/src/test.ts",
+            "tsConfig": "projects/ngx-quickly/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-quickly/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-quickly/tsconfig.lib.json",
+              "projects/ngx-quickly/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "SecureIt-Desk"

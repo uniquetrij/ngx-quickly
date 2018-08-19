@@ -16,6 +16,16 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-quickly": [
+        "dist/ngx-quickly",
+        "dist/ngx-quickly"
+      ],
+      "ngx-quickly/*": [
+        "dist/ngx-quickly/*",
+        "dist/ngx-quickly/*"
+      ]
+    }
   }
 }
