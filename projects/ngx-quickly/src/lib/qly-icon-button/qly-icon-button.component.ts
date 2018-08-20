@@ -6,6 +6,7 @@ export class QlyIconButtonModel {
   onClick: Function;
 }
 
+// @ts-ignore
 @Component({
   selector: 'qly-icon-button',
   templateUrl: './qly-icon-button.component.html',
